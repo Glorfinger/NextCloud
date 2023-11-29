@@ -15,6 +15,7 @@ if [ ! -d "/etc/ssh/sshd_config.d" ]; then
 fi
 # Création du fichier hardening dans /etc/ssh/sshd_config.d
 sudo touch /etc/ssh/sshd_config.d/hardening
+sudo chmod 777 /etc/ssh/sshd_config.d/hardening
 #
 # options actuellement configurées.
 sudo sshd -t
