@@ -12,6 +12,7 @@ if [ ! -d "/etc/ssh/sshd_config.d" ]; then
     sudo mkdir -p /etc/ssh/sshd_config.d
     # Ajouter la ligne au fichier sshd_config
     echo "Include /etc/ssh/sshd_config.d/*.conf" | sudo tee -a /etc/ssh/sshd_config > /dev/null
+fi
 # Création du fichier hardening dans /etc/ssh/sshd_config.d
 sudo touch /etc/ssh/sshd_config.d/hardening
 #
@@ -53,7 +54,7 @@ sudo sed -i 's/DebianBanner.*/DebianBanner no/' /etc/ssh/sshd_config.d/hardening
 #
 # Redémarrage du serveur.
 sudo service ssh restart
-fi
+
 
 
 
