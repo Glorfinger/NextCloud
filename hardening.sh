@@ -22,47 +22,37 @@ sudo chmod 644 /etc/ssh/sshd_config.d/hardening.conf
 sudo sshd -t
 #
 # Configuration de la permission dans le fichier hardening.
-sudo echo 's/PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'PermitRootLogin no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Limitation du nombre de connexions dans le fichier hardening.
-sudo echo 's/MaxAuthTries.*/MaxAuthTries 3/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'MaxAuthTries 3' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Délai de connexion dans le fichier hardening.
-sudo echo 's/LoginGraceTime.*/LoginGraceTime 20/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'LoginGraceTime 20' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Désactivation de l'authentification dans le fichier hardening.
-sudo echo 's/PermitEmptyPasswords.*/PermitEmptyPasswords no/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'PermitEmptyPasswords no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Authentification par mots de passe SSH dans le fichier hardening.
-sudo echo 's/PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'PasswordAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Désactivation de la méthode d'authentification ChallengeResponseAuthentication dans le fichier hardening.
-sudo echo 's/ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'ChallengeResponseAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Désactivation de la méthode d'authentification KerberosAuthentication dans le fichier hardening.
-sudo echo 's/KerberosAuthentication.*/KerberosAuthentication no/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'KerberosAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Désactivation de la méthode d'authentification GSSAPIAuthentication dans le fichier hardening.
-#sudo echo 's/GSSAPIAuthentication.*/GSSAPIAuthentication no/' /etc/ssh/sshd_config.d/hardening.conf
+#echo 'GSSAPIAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Désactivation du X11 forwarding dans le fichier hardening.
-sudo echo 's/X11Forwarding.*/X11Forwarding no/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'X11Forwarding no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Comme X11 forwarding est peu utilisé, on le désactive dans le fichier hardening.
-sudo echo 's/PermitUserEnvironment.*/PermitUserEnvironment no/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'PermitUserEnvironment no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Désactivation du DebianBanner dans le fichier hardening.
-sudo echo 's/DebianBanner.*/DebianBanner no/' /etc/ssh/sshd_config.d/hardening.conf
+echo 'DebianBanner no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Redémarrage du serveur.
 sudo service ssh restart
-
-
-
-
-
-
-
-
-
-
