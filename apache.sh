@@ -1,10 +1,10 @@
 #!/bin/bash
 
-connexion ssh
-verification des sources avec apt 
-met a jour le référenciel avec apt update
-install apache2
-sécurise le serveur web avec du https 
+# connexion ssh
+# verification des sources avec apt 
+# met a jour le référenciel avec apt update
+# install apache2
+# sécurise le serveur web avec du https 
 
 # Fonction pour vérifier si une chaîne est un port valide
 valid_port() {
