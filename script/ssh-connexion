@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Fonction pour vérifier si une chaîne est un port valide
 valid_port() {
     local port="$1"
