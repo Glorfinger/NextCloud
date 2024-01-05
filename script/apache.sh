@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# connexion ssh
-# verification des sources avec apt 
-# met a jour le référenciel avec apt update
-# install apache2
-# sécurise le serveur web avec du https 
-
 # Vérification des sources avec apt
 sudo apt-get update
 
