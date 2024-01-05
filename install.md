@@ -1,3 +1,16 @@
+Prérequis : 
+Pour utiliser notre script, vous devez avoir un terminal fonctionnel et GIT d'installer. 
+
+Installation GIT : $ sudo apt install git-all
+
+Une fois git installé, vous devez cloner le repos NextToCloud :
+
+$ git clone https://github.com/Glorfinger/NextCloud.git
+
+HTTPS : https://github.com/Glorfinger/NextCloud.git
+SSH : git@github.com:Glorfinger/NextCloud.git
+
+
 Apache.sh
  - Config apache2 :
     - a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
