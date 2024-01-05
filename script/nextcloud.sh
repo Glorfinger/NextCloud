@@ -5,7 +5,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # Installer PHP et d'autres dépendances
-sudo apt-get install -y apache2 mariadb-server libapache2-mod-php8.2 imagemagick \
+sudo apt-get install -y mariadb-server libapache2-mod-php8.2 imagemagick \
      php8.2-gd php8.2-mysql php8.2-curl php8.2-mbstring \
      php8.2-intl php8.2-imagick php8.2-xml php8.2-zip \
      php8.2-apcu redis-server php8.2-redis \
