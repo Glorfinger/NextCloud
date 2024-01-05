@@ -1,5 +1,4 @@
 Apache.sh
- - installation apache2
  - Config apache2 :
     - a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
     - a2enmod headers (https://httpd.apache.org/docs/2.4/mod/mod_headers.html)
@@ -13,7 +12,6 @@ Hardening.sh
  - configuration du fichier sshd_config.d
 
 ufw.sh
- - installation d'ufw
  - configuration de ports (ssh, http, https)
 
 NextCloud.sh
