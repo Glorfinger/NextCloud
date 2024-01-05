@@ -13,6 +13,8 @@ Apache.sh
     - a2enmod env
     - a2enmod dir
     - a2enmod mime
+    - a2enmod ssl
+    - a2ensite default-ssl
 
 Hardening.sh 
  - configuration du fichier sshd_config.d
