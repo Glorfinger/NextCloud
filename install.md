@@ -11,6 +11,13 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 - SSH : git@github.com:Glorfinger/NextCloud.git
 
 
+
+
+
+
+
+
+
 Dans ce script, voici l'ensemble des modules qui seront installés : 
 
 Apache.sh
