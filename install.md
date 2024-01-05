@@ -31,7 +31,7 @@ Apache.sh
     - a2ensite default-ssl
 
 Hardening.sh 
- - configuration du fichier sshd_config.d
+ - configuration du fichier sshd_config.d (capture écran du fichier final)
 
 ufw.sh
  - configuration de ports (ssh, http, https)
