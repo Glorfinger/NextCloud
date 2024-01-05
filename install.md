@@ -11,6 +11,8 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 - SSH : git@github.com:Glorfinger/NextCloud.git
 
 
+Dans ce script, voici l'ensemble des modules qui seront installés : 
+
 Apache.sh
  - Config apache2 :
     - a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
