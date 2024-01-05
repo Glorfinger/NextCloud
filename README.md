@@ -8,12 +8,12 @@ Déploiement automatisé dédié à l’hébergement d’un service Nextcloud é
 Apache.sh
  - installation apache2
  - Config apache2 :
-    - a2enmod rewrite
-    - a2enmod headers
-    - a2enmod env
-    - a2enmod dir
-    - a2enmod mime
-    - a2enmod ssl
+    - a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
+    - a2enmod headers (https://httpd.apache.org/docs/2.4/mod/mod_headers.html)
+    - a2enmod env (https://httpd.apache.org/docs/2.4/mod/mod_env.html)
+    - a2enmod dir (https://httpd.apache.org/docs/2.4/mod/mod_dir.html)
+    - a2enmod mime (https://httpd.apache.org/docs/2.4/mod/mod_mime.html)
+    - a2enmod ssl (https://httpd.apache.org/docs/2.4/mod/mod_ssl.html)
     - a2ensite default-ssl
 
 Hardening.sh 
