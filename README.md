@@ -7,9 +7,12 @@ Déploiement automatisé dédié à l’hébergement d’un service Nextcloud é
 
 Apache.sh
  - installation apache2
+
 Hardening.sh 
  - configuration du fichier sshd_config.d
+
 ufw.sh
  - installation d'ufw
+
 NextCloud.sh
  - installation du service et ses dépendances
