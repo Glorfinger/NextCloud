@@ -24,7 +24,7 @@ sudo sed -i "s/^\(Port \)[0-9]\+/\1$ssh_port/" /etc/ssh/sshd_config
 sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$http_port/"  /etc/apache2/sites-enabled/000-default.conf
 
 # Modifier le fichier de configuration Apache pour HTTPS
-sudo sed -i "s/^\(Listen \)[0-9]\+/\1$https_port/" /etc/apache2/sites-enabled/default-ssl.conf
+sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$https_port/" /etc/apache2/sites-enabled/default-ssl.conf
 
 # Recharger la configuration SSH
 sudo systemctl reload ssh
