@@ -20,8 +20,7 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 
 Dans ce script, voici l'ensemble des modules qui seront installés : 
 
-Apache.sh
-----------
+# Apache.sh
  - Config apache2 :
     - a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
     - a2enmod headers (https://httpd.apache.org/docs/2.4/mod/mod_headers.html)
@@ -31,8 +30,7 @@ Apache.sh
     - a2enmod ssl (https://httpd.apache.org/docs/2.4/mod/mod_ssl.html)
     - a2ensite default-ssl
 
-Hardening.sh
-----------
+## Hardening.sh
  - configuration du fichier sshd_config.d (capture écran du fichier final)
 
 ufw.sh
