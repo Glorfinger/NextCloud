@@ -4,8 +4,9 @@
 #           OpenSSH - hardening
 # ------------------------------------------------------------------
 #
-# Sauvegarde de votre fichier de configuration existant, afin de pouvoir le restaurer dans le cas improbable où quelque chose se passerait mal.
-#sudo cp /etc/ssh/sshd_config /etc/ssh/ssh_config_backup
+# Sauvegarde du fichier de configuration existant, afin de pouvoir le restaurer dans le cas où quelque chose se passerait mal.
+sudo cp /etc/ssh/sshd_config /etc/ssh/ssh_config_backup
+
 # Création du répertoire sshd_config.d s'il n'existe pas
 if [ ! -d "/etc/ssh/sshd_config.d" ]; then
     # Créer le répertoire s'il n'existe pas
@@ -41,9 +42,6 @@ echo 'ChallengeResponseAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/h
 #
 # Désactivation de la méthode d'authentification KerberosAuthentication dans le fichier hardening.
 echo 'KerberosAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
-#
-# Désactivation de la méthode d'authentification GSSAPIAuthentication dans le fichier hardening.
-#echo 'GSSAPIAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 #
 # Désactivation du X11 forwarding dans le fichier hardening.
 echo 'X11Forwarding no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
