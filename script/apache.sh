@@ -13,3 +13,4 @@ sudo apt-get install apache2 -y
 sudo a2enmod ssl
 sudo a2ensite default-ssl
 sudo service apache2 restart
+systemctl reload apache2
