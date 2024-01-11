@@ -20,7 +20,7 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 
 Dans ce script, voici l'ensemble des modules qui seront installés : 
 
-# Apache.sh
+## Apache.sh
  - Config apache2 :
     - a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
     - a2enmod headers (https://httpd.apache.org/docs/2.4/mod/mod_headers.html)
@@ -33,12 +33,10 @@ Dans ce script, voici l'ensemble des modules qui seront installés :
 ## Hardening.sh
  - configuration du fichier sshd_config.d (capture écran du fichier final)
 
-ufw.sh
-----------
+## ufw.sh
  - configuration de ports (ssh, http, https)
 
-NextCloud.sh
-----------
+## NextCloud.sh
  - Installation MariaBD-server
  - libapache2-mod-php8.2
  - imagemagick
