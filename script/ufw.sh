@@ -12,14 +12,16 @@ progress_bar() {
     # Calculer le nombre d'itérations en fonction de la durée
     local iterations=$((duration * 10))
 
-    # Boucle pour mettre à jour la barre de progression
     for ((i = 0; i <= iterations; i++)); do
         # Calculer la progression actuelle
         local progress=$((i * total_width / iterations))
         local percent=$((i * 100 / iterations))
 
-        # Afficher la barre de progression
-        printf "\r%s [%-${total_width}s] %d%%" "$title" "${progress_char:0:progress}" "$percent"
+        # Construire la barre de progression
+        local progress_bar=$(printf "[%-${total_width}s]" "${progress_char:0:progress}")
+
+        # Afficher la barre de progression avec le titre et le pourcentage alignés
+        printf "\r%-40s %s %d%%" "$title" "$progress_bar" "$percent"
 
         # Pause pour simuler une opération
         sleep 0.1
