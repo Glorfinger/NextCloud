@@ -98,10 +98,10 @@ https_port=${https_port:-443}
 sudo sed -i "s/^\(Port \)[0-9]\+/\1$ssh_port/" /etc/ssh/sshd_config | progress_bar 1 "Modification de la configuration SSH"
 
 # Modifier le fichier de configuration Apache pour HTTP
-sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$http_port/" /etc/apache2/sites-enabled/000-default.conf | progress_bar 1 "Modification de la configuration Apache (HTTP)"
+sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$http_port/" /etc/apache2/sites-enabled/000-default.conf | progress_bar 1 "Modification de la configuration Apache HTTP"
 
 # Modifier le fichier de configuration Apache pour HTTPS
-sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$https_port/" /etc/apache2/sites-enabled/default-ssl.conf | progress_bar 1 "Modification de la configuration Apache (HTTPS)"
+sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$https_port/" /etc/apache2/sites-enabled/default-ssl.conf | progress_bar 1 "Modification de la configuration HTTPS"
 
 # Recharger la configuration SSH
 sudo systemctl reload ssh | progress_bar 1 "Rechargement de la configuration SSH"
