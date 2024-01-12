@@ -1,6 +1,6 @@
 #!/bin/bash
 
-barre de progression : 
+Barre de progression : 
 
 # Fonction pour afficher une barre de progression
 progress_bar() {
