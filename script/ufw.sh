@@ -6,7 +6,7 @@ Barre de progression :
 progress_bar() {
     local duration=${1}
     local title=${2:-"Progress"}
-    local progress_char="▉"
+    local progress_char="#########################################"
     local total_width=40
 
     # Calculer le nombre d'itérations en fonction de la durée
