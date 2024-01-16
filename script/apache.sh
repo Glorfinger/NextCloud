@@ -37,7 +37,7 @@ sudo apt-get install apache2 -y | progress_bar 1 "Installation d'Apache"
 sudo a2enmod ssl | progress_bar 1 "Activation du mode SSL"
 sudo a2ensite default-ssl | progress_bar 1 "Configuration de HTTPS"
 sudo service apache2 restart | progress_bar 1 "Redémarrage d'Apache"
-systemctl reload apache2 | progress_bar 1 "Rechargement de la configuration d'Apache"
+sudo systemctl reload apache2 | progress_bar 1 "Rechargement de la configuration d'Apache"
 
 echo "Installation et configuration d'Apache terminées"
 
