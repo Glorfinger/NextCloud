@@ -35,7 +35,7 @@ progress_bar() {
     echo
 }
 
-
+echo
 echo "Sauvegarde du fichier de configuration existant..."
 sudo cp /etc/ssh/sshd_config /etc/ssh/ssh_config_backup
 
@@ -88,3 +88,7 @@ echo "Redémarrage du serveur SSH..."
 sudo service ssh restart
 
 echo "Installation et configuration d'OpenSSH terminées"
+echo
+echo
+echo
+echo
