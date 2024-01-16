@@ -1,7 +1,5 @@
 #!/bin/bash
 
-Barre de progression : 
-
 # Fonction pour afficher une barre de progression
 progress_bar() {
     local duration=${1}
