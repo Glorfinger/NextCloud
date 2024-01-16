@@ -5,10 +5,10 @@ script_folder="~/bashScript/NextCloud/script"
 
 # Exécution des scripts dans l'ordre
 echo "Exécution du script : apache.sh"
-bash "$script_folder/apache.sh"
+sudo bash "$script_folder/apache.sh"
 
 echo "Exécution du script : hardening.sh"
-bash "$script_folder/hardening.sh"
+sudo bash "$script_folder/hardening.sh"
 
 echo "Exécution du script : ufw.sh"
-bash "$script_folder/ufw.sh"
+sudo bash "$script_folder/ufw.sh"
