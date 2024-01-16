@@ -34,7 +34,7 @@ progress_bar() {
 # Installer UFW
 echo "Installation d'UFW en cours..."
 sudo apt update | progress_bar 1 "Mise à jour des paquets"
-sudo apt install ufw | progress_bar 1 "Installation d'UFW"
+sudo apt install ufw -y | progress_bar 1 "Installation d'UFW"
 
 # Activer UFW
 echo "Activation d'UFW..."
