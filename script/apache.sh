@@ -27,7 +27,8 @@ progress_bar() {
 
     echo
 }
-
+echo
+echo
 echo "Installation d'Apache en cours..."
 echo
 
