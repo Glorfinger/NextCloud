@@ -40,7 +40,10 @@ sudo service apache2 restart | progress_bar 1 "Redémarrage d'Apache"
 sudo systemctl reload apache2 | progress_bar 1 "Rechargement de la configuration d'Apache"
 
 echo "Installation et configuration d'Apache terminées"
-
+echo
+echo
+echo
+echo
 
 
 
