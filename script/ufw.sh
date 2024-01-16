@@ -27,7 +27,7 @@ progress_bar() {
         sleep 0.1
     done
 
-    # Nouvelle ligne pour nettoyer la sortie
+
     echo
 }
 
