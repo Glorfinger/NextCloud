@@ -29,6 +29,7 @@ progress_bar() {
 }
 
 echo "Installation d'Apache en cours..."
+echo
 
 # Installation d'Apache2
 sudo apt-get install apache2 -y | progress_bar 1 "Installation d'Apache"
