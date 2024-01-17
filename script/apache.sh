@@ -37,7 +37,7 @@ echo
 echo
 echo
 
-: '
+: << 'COMMENT'
 #!/bin/bash
 
 #progress_bar() {
@@ -89,7 +89,9 @@ echo
 echo
 echo
 echo
-'
+
+
+COMMENT
 
 
 
