@@ -15,19 +15,19 @@ echo
 
 # Sécurisation du serveur web avec HTTPS
 echo
-echo "Activation du mode SSL"
+echo "Activation du mode SSL..."
 echo
 sudo a2enmod ssl 
 echo
-echo "Configuration de HTTPS"
+echo "Configuration de HTTPS..."
 echo
 sudo a2ensite default-ssl 
 echo
-echo "Redémarrage d'Apache"
+echo "Redémarrage d'Apache..."
 echo
 sudo service apache2 restart 
 echo
-echo "Rechargement de la configuration d'Apache"
+echo "Rechargement de la configuration d'Apache..."
 echo
 sudo systemctl reload apache2 
 
