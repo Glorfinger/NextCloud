@@ -30,7 +30,7 @@ echo
 echo "Rechargement de la configuration d'Apache..."
 echo
 sudo systemctl reload apache2 
-
+echo
 echo "Installation et configuration d'Apache terminées"
 echo
 echo
