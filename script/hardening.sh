@@ -66,8 +66,8 @@ echo 'LoginGraceTime 20' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /
 progress_bar 1 "Désactivation de l'authentification..."
 echo 'PermitEmptyPasswords no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 
-progress_bar 1 "Authentification par mots de passe SSH..."
-echo 'PasswordAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+#progress_bar 1 "Authentification par mots de passe SSH..."
+#echo 'PasswordAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
 
 progress_bar 1 "Désactivation de ChallengeResponseAuthentication..."
 echo 'ChallengeResponseAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
