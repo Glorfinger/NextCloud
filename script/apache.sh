@@ -37,7 +37,7 @@ echo
 echo
 echo
 
-<<com
+: '
 #!/bin/bash
 
 #progress_bar() {
@@ -89,7 +89,7 @@ echo
 echo
 echo
 echo
-<<com
+'
 
 
 
