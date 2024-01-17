@@ -6,6 +6,110 @@
 #
 # Sauvegarde du fichier de configuration existant, afin de pouvoir le restaurer dans le cas où quelque chose se passerait mal.
 
+
+#!/bin/bash
+
+# Fonction pour afficher une ligne de séparation
+print_separator() {
+    echo "------------------------------------------------------------"
+}
+
+# Fonction pour afficher un message avec mise en forme
+print_message() {
+    echo -e "\e[1m$1\e[0m"  # Texte en gras
+}
+
+# Fonction pour afficher une étape avec mise en forme
+print_step() {
+    print_separator
+    print_message "$1"
+    print_separator
+}
+
+# Sauvegarde du fichier de configuration existant
+print_step "Sauvegarde du fichier de configuration existant..."
+sudo cp /etc/ssh/sshd_config /etc/ssh/ssh_config_backup
+
+# Création du répertoire sshd_config.d
+print_step "Création du répertoire sshd_config.d..."
+if [ ! -d "/etc/ssh/sshd_config.d" ]; then
+    sudo mkdir -p /etc/ssh/sshd_config.d
+    echo "Include /etc/ssh/sshd_config.d/*.conf" | sudo tee -a /etc/ssh/sshd_config > /dev/null
+fi
+
+# Création du fichier hardening dans /etc/ssh/sshd_config.d
+print_step "Création du fichier hardening dans /etc/ssh/sshd_config.d..."
+sudo touch /etc/ssh/sshd_config.d/hardening.conf
+sudo chown root:root /etc/ssh/sshd_config.d/hardening.conf
+sudo chmod 644 /etc/ssh/sshd_config.d/hardening.conf
+sudo sshd -t
+
+# Configuration du fichier hardening.conf
+print_step "Configuration du fichier hardening.conf"
+echo 'PermitRootLogin no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'MaxAuthTries 3' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'LoginGraceTime 20' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'PermitEmptyPasswords no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'PasswordAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'ChallengeResponseAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'KerberosAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'X11Forwarding no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'PermitUserEnvironment no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'DebianBanner no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+
+# Redémarrage du service SSH
+print_step "Redémarrage du service SSH"
+sudo service ssh restart
+
+# Message de fin
+print_separator
+print_message "Installation et configuration d'OpenSSH terminées"
+print_separator
+
+
+
+: << 'COMMENT'
+
+echo
+echo "Sauvegarde du fichier de configuration existant..."
+sudo cp /etc/ssh/sshd_config /etc/ssh/ssh_config_backup
+
+echo "Création du répertoire sshd_config.d..."
+if [ ! -d "/etc/ssh/sshd_config.d" ]; then
+    sudo mkdir -p /etc/ssh/sshd_config.d
+    echo "Include /etc/ssh/sshd_config.d/*.conf" | sudo tee -a /etc/ssh/sshd_config > /dev/null
+fi
+
+echo "Création du fichier hardening dans /etc/ssh/sshd_config.d..."
+sudo touch /etc/ssh/sshd_config.d/hardening.conf
+sudo chown root:root /etc/ssh/sshd_config.d/hardening.conf
+sudo chmod 644 /etc/ssh/sshd_config.d/hardening.conf
+sudo sshd -t
+
+# Configuration du fichier hardening.conf
+echo 'PermitRootLogin no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'MaxAuthTries 3' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'LoginGraceTime 20' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'PermitEmptyPasswords no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'PasswordAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'ChallengeResponseAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'KerberosAuthentication no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'X11Forwarding no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'PermitUserEnvironment no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+echo 'DebianBanner no' | sudo tee -a /etc/ssh/sshd_config.d/hardening.conf > /dev/null
+
+# Redémarrage du service SSH
+sudo service ssh restart
+
+echo "Installation et configuration d'OpenSSH terminées"
+echo
+echo
+echo
+echo
+
+
+: << 'COMMENT'
+
 # Fonction pour afficher une barre de progression
 progress_bar() {
     local duration=${1}
@@ -92,3 +196,4 @@ echo
 echo
 echo
 echo
+COMMENT
