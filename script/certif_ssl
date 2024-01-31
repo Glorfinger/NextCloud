@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # Variables
-CERT_PATH="/etc/ssl/certs/autosigned.crt"
-KEY_PATH="/etc/ssl/private/autosigned.key"
+CERT_PATH="$HOME/autosigned.crt"
+KEY_PATH="$HOME/autosigned.key"
 
-# Générer un certificat auto-signé sans nom de domaine spécifique
+# Création du certificat auto-signé sans dns 
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${KEY_PATH} -out ${CERT_PATH} -subj "/C=FR/ST=State/L=City/O=Organization/CN="
+
 
 # Afficher le certificat généré
 cat ${CERT_PATH}
