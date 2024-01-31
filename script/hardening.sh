@@ -23,6 +23,10 @@ echo "Création du fichier hardening dans /etc/ssh/sshd_config.d..."
 sudo touch /etc/ssh/sshd_config.d/hardening.conf
 sudo chown root:root /etc/ssh/sshd_config.d/hardening.conf
 sudo chmod 644 /etc/ssh/sshd_config.d/hardening.conf
+
+# Nettoyage du fichier de configuration pour ne pas avoir de doublon si le script est lancé plusieurs fois
+sudo sed -i '/PermitRootLogin\|MaxAuthTries\|LoginGraceTime\|PermitEmptyPasswords\|PasswordAuthentication\|ChallengeResponseAuthentication\|KerberosAuthentication\|X11Forwarding\|PermitUserEnvironment\|DebianBanner/d' /etc/ssh/sshd_config.d/hardening.conf
+
 sudo sshd -t
 
 # Configuration du fichier hardening.conf
