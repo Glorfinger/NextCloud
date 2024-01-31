@@ -1,54 +1,45 @@
 #!/bin/bash
 
-# Mettre à jour le système
-sudo apt update
-sudo apt upgrade -y
+#Update and Upgrade the Ubuntu Packages
+sudo apt update && apt upgrade
 
-# Installer PHP et d'autres dépendances
-sudo apt-get install -y mariadb-server libapache2-mod-php8.2 imagemagick \
-     php8.2-gd php8.2-mysql php8.2-curl php8.2-mbstring \
-     php8.2-intl php8.2-imagick php8.2-xml php8.2-zip \
-     php8.2-apcu redis-server php8.2-redis \
-     php8.2-ldap smbclient php8.2-bcmath php8.2-gmp \
+#install Apache and MySQL Server
+sudo apt install apache2 
 
-# Activation des modules
-a2enmod rewrite
-a2enmod headers
-a2enmod env
-a2enmod dir
-a2enmod mime
+#Install PHP and other Dependencies and Restart Apache
 
-# Redémarrage service apache
+sudo apt install libapache2-mod-php php-bz2 php-gd php-curl php-mbstring php-imagick php-zip php-ctype php-curl php-dom php-json php-posix php-bcmath php-xml php-intl php-gmp zip unzip wget
+
+#Enable required Apache modules and restart Apache:
+sudo a2enmod rewrite dir mime env headers
 sudo systemctl restart apache2
 
-#Telechargement Nextcloud
-wget https://download.nextcloud.com/server/releases/latest-27.tar.bz2
+#Download and unzip at the web root (/var/www/html) folder
+cd /var/www/html
+wget https://download.nextcloud.com/server/releases/latest.zip
+unzip latest.zip
 
-#Extraction dans le repertoire /var/www/
-tar -xvf latest-27.tar.bz2 -C /var/www/
+#Move all nextcloud content to the web root (/var/www/html) folder
+cd /var/www/html/nextcloud
+sudo mv * .* ../
 
-#Changement propriétaire répertoire Nextcloud
-chown -R www-data:www-data /var/www/nextcloud/
+#Remove empty nextcloud directory
+sudo rmdir /var/www/html/nextcloud
 
-# Créer une base de données pour Nextcloud
-sudo mysql -u root -e "CREATE DATABASE nextcloud;"
-sudo mysql -u root -e "CREATE USER 'nextcloud'@'localhost' IDENTIFIED BY 'mot-de-passe';"
-sudo mysql -u root -e "GRANT ALL ON nextcloud.* TO 'nextcloud'@'localhost';"
-sudo mysql -u root -e "FLUSH PRIVILEGES;"
+#Change the ownership of the nextcloud content directory to the HTTP user.
+sudo chown -R www-data:www-data /var/www/html
 
-# Activer la configuration du site pour Nextcloud
-sudo a2ensite nextcloud.conf
+#Run the nextcloud installation CLI commands.
+cd /var/www/html
+sudo -u www-data php occ  maintenance:install
 
-# Redémarrer Apache pour appliquer les modifications
-sudo systemctl reload apache2
+#If everything goes well the command will output “Nextcloud was successfully installed”.
 
-# Afficher l'adresse IP du serveur pour accéder à Nextcloud
-echo "Installation de Nextcloud terminée."
-echo "Accédez à votre Nextcloud en utilisant l'adresse : http://$(hostname -I | awk '{print $1}')/nextcloud"
+#Now save the file and restart apache2
 
+sudo systemctl restart apache2
 
-
-
+#Now, Go to the Browser and type http:// [ ip or fqdn ] of the server, as the configuration is completed command line, the Login page will appear.
 
 
 
