@@ -1,50 +1,29 @@
 #!/bin/bash
 
-# Mettre à jour le système
+# Update package lists and install necessary packages
 sudo apt update
-sudo apt upgrade -y
+sudo apt install -y mariadb-server libapache2-mod-php7.4 \
+    php7.4-common php7.4-mysql php7.4-xml php7.4-zip
 
-# Installer PHP et d'autres dépendances
-sudo apt-get install -y mariadb-server libapache2-mod-php8.2 imagemagick \
-     php8.2-gd php8.2-mysql php8.2-curl php8.2-mbstring \
-     php8.2-intl php8.2-imagick php8.2-xml php8.2-zip \
-     php8.2-apcu redis-server php8.2-redis \
-     php8.2-ldap smbclient php8.2-bcmath php8.2-gmp \
+# Secure MariaDB installation
+sudo mysql_secure_installation
 
-# Activation des modules
-a2enmod rewrite
-a2enmod headers
-a2enmod env
-a2enmod dir
-a2enmod mime
+# Download and extract Nextcloud
+sudo mkdir -p /var/www/html/nextcloud
+wget -P /tmp https://download.nextcloud.com/server/releases/latest.tar.bz2
+sudo tar -xjf /tmp/latest.tar.bz2 -C /var/www/html/
 
-# Redémarrage service apache
-sudo systemctl restart apache2
+# Set permissions
+sudo chown -R www-data:www-data /var/www/html/nextcloud/
 
-#Telechargement Nextcloud
-wget https://download.nextcloud.com/server/releases/latest-27.tar.bz2
+# Create a database and user for Nextcloud
+sudo mysql -e "CREATE DATABASE nextcloud;"
+sudo mysql -e "CREATE USER 'nextcloud'@'localhost' IDENTIFIED BY 'password';"
+sudo mysql -e "GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'localhost';"
+sudo mysql -e "FLUSH PRIVILEGES;"
 
-#Extraction dans le repertoire /var/www/
-tar -xvf latest-27.tar.bz2 -C /var/www/
+echo "Nextcloud has been successfully installed."
 
-#Changement propriétaire répertoire Nextcloud
-chown -R www-data:www-data /var/www/nextcloud/
-
-# Créer une base de données pour Nextcloud
-sudo mysql -u root -e "CREATE DATABASE nextcloud;"
-sudo mysql -u root -e "CREATE USER 'nextcloud'@'localhost' IDENTIFIED BY 'mot-de-passe';"
-sudo mysql -u root -e "GRANT ALL ON nextcloud.* TO 'nextcloud'@'localhost';"
-sudo mysql -u root -e "FLUSH PRIVILEGES;"
-
-# Activer la configuration du site pour Nextcloud
-sudo a2ensite nextcloud.conf
-
-# Redémarrer Apache pour appliquer les modifications
-sudo systemctl reload apache2
-
-# Afficher l'adresse IP du serveur pour accéder à Nextcloud
-echo "Installation de Nextcloud terminée."
-echo "Accédez à votre Nextcloud en utilisant l'adresse : http://$(hostname -I | awk '{print $1}')/nextcloud"
 
 
 
