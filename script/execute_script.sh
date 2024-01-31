@@ -12,3 +12,6 @@ bash "$script_folder/hardening.sh"
 
 echo "Exécution du script : ufw.sh"
 bash "$script_folder/ufw.sh"
+
+echo "Execution du script : nextcloud.sh"
+bash "$script_folder/nextcloud.sh"
