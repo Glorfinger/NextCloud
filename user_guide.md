@@ -1,4 +1,4 @@
-Guide de l'Utilisateur - Nextcloud Script
+## Guide de l'Utilisateur - Nextcloud Script
 ### Table des matières
 
 Introduction
@@ -48,12 +48,23 @@ Avant d'installer le script, assurez-vous que votre système répond aux exigenc
   * Un accès internet.
   * Disposer des droits SUDO.
 
-Installation
-2.1 Téléchargement
-[Expliquez où les utilisateurs peuvent télécharger le script et assurez-vous de fournir des liens ou des instructions précises.]
+## Installation
+ ### 2.1 Téléchargement
+Pour télécharger notre script, vous pouvez vous rendre directement sur https://github.com/Glorfinger/NextCloud/ et clone le repos sur votre machine en utilisant ces liens : 
+ * https : 'https://github.com/Glorfinger/NextCloud.git'
+ * ssh : 'git@github.com:Glorfinger/NextCloud.git'
 
-2.2 Installation du script
-[Guidez les utilisateurs à travers le processus d'installation étape par étape, en incluant des captures d'écran si nécessaire.]
+ ### 2.2 Installation du script
+Une fois le repos cloné sur votre machine vous n'avez plus qu'à exécuter le script 'execute_script.sh', ce script va lancer nos script dans un ordre défini.
+ * './execute_script.sh'
+ * 'bash execute_script.sh'
+ * 'sh execute_script.sh'
 
-2.3 Configuration initiale
+ ### 2.3 Configuration initiale
 [Si le script nécessite une configuration initiale, fournissez des instructions détaillées ici.]
+
+## Premiers Pas
+ ### 3.1 Lancement du script
+ ### 3.2 Interface utilisateur
+ ### 3.3 Paramètres de base
+
