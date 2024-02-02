@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Installation openssl 
-apt install opensll
+apt install openssl
 
 # Variables
 CERT_PATH="$HOME/autosigned.crt"
