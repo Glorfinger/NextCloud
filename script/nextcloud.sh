@@ -23,8 +23,7 @@ sudo mysql -e "GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'localhost';"
 sudo mysql -e "FLUSH PRIVILEGES;"
 
 echo "Nextcloud has been successfully installed."
-
-
+echo "Accédez à votre Nextcloud en utilisant l'adresse : http://$(hostname -I | awk '{print $1}')/nextcloud"
 
 
 
