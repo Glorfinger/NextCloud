@@ -32,7 +32,7 @@ echo
 
 # Modifier les droits de Nextcloud pour Apache2
 echo
-chown -R www-data:www-data /var/www/html/nextcloud
+sudo chown -R www-data:www-data /var/www/html/nextcloud
 echo
 
 echo
@@ -46,19 +46,20 @@ echo
 
 #Connexion à mysql
 echo
-mysql -u root -p
+sudo mysql -u root -p
 echo
 
 # Création de la database
 echo
-CREATE DATABASE db23nextcloud;
+sudo CREATE DATABASE db23nextcloud;
 echo
-GRANT ALL ON db23nextcloud.* TO 'usr23nextcloud'@'localhost' IDENTIFIED BY 'Password14';
+sudo GRANT ALL ON db23nextcloud.* TO 'usr23nextcloud'@'localhost' IDENTIFIED BY 'Password14';
 echo
-FLUSH PRIVILEGES;
+sudo FLUSH PRIVILEGES;
 echo
 EXIT;
 echo
+
 echo
 echo "Nextcloud has been successfully installed."
 echo "Accédez à votre Nextcloud en utilisant l'adresse : http://$(hostname -I | awk '{print $1}')/nextcloud"
