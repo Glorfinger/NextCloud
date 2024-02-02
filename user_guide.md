@@ -1,33 +1,4 @@
 ## Guide de l'Utilisateur - Nextcloud Script
-### Table des matières
-
-## Introduction
- * 1.1 À propos du script
- * 1.2 Configuration système requise
-
-## Installation
- * 2.1 Téléchargement
- * 2.2 Installation du script
- * 2.3 Configuration initiale
-
-## Premiers Pas
- * 3.1 Lancement du script
- * 3.2 Interface utilisateur
- * 3.3 Paramètres de base
-
-## Fonctionnalités Principales
- * 4.1 [Nom de la première fonctionnalité]
- * 4.1.1 Configuration
- * 4.1.2 Utilisation
- * 4.2 [Nom de la deuxième fonctionnalité]
- * 4.2.1 Configuration
- * 4.2.2 Utilisation
-
-## Astuces et Conseils
- * 5.1 Optimisation des performances
- * 5.2 Dépannage courant
- * 5.3 Raccourcis clavier
-FAQ
 
 6.1 Questions fréquemment posées
 6.2 Ressources supplémentaires
@@ -44,8 +15,7 @@ Bienvenue dans le guide de l'utilisateur de notre Script NextCloud. Ce script a 
 
  ### 1.2 Configuration système requise
 Avant d'installer le script, assurez-vous que votre système répond aux exigences minimales suivantes : 
-  * Systeme d'exploitation : Ubuntu version 11
-  * Un accès internet.
+  * Systeme d'exploitation : Linux
   * Disposer des droits SUDO.
 
 ## Installation
@@ -55,16 +25,44 @@ Pour télécharger notre script, vous pouvez vous rendre directement sur https:/
  * ssh : 'git@github.com:Glorfinger/NextCloud.git'
 
  ### 2.2 Installation du script
-Une fois le repos cloné sur votre machine vous n'avez plus qu'à exécuter le script 'execute_script.sh', ce script va lancer nos script dans un ordre défini.
+Une fois le repos cloné sur votre machine, vous devez vous rendre dans le dossier où vous venez de cloner le repos 'NextCloud > Script'  et exécuter le script 'execute_script.sh'. 
+
+Commandes :
  * './execute_script.sh'
  * 'bash execute_script.sh'
  * 'sh execute_script.sh'
 
  ### 2.3 Configuration initiale
-[Si le script nécessite une configuration initiale, fournissez des instructions détaillées ici.]
+ * Avoir un accès internet
 
-## Premiers Pas
- ### 3.1 Lancement du script
- ### 3.2 Interface utilisateur
- ### 3.3 Paramètres de base
+## Fonctionnalités principales 
+ ### 3.1 Installation d'un service web (Apache2)
+ ### 3.2 Configuration d'Apache2
+  * a2enmod
+  * a2ensite
+    
+ ### 3.3 Configuration du Hardening
+ Pour la configuration du hardening, nous avons créer un fichier de configuration dans  '/etc/ssh/sshd_config.d/hardening.conf'. ATTENTION : à chaque utilisation du script, le fichier Hardening sera réinitiallisé.
+ 
+ Configuration du Hardening : 
+  * PermitRootLogin no
+  * MaxAuthTries 3
+  * LoginGraceTime 20
+  * PermitEmptyPasswords no
+  * PasswordAuthentication no
+  * ChallengeResponseAuthentication no
+  * KerberosAuthentication no
+  * X11Forwarding no
+  * PermitUserEnvironment no
+  * DebianBanner no
 
+### 3.4 Installation d'UFW
+Installation d'UFW pour configurer le pare-feu. ATTENTION : lors de l'installation d'ufw, il vous sera demandé de saisir le port que vous souhaitez utilisé pour SSH , HTTP et HTTPS. 
+
+### 3.5 Installation d'un certification Auto signé.
+Installation d'OPENSLL pour gérer la création des certificats SSL. Si vous avez oublié de noté la clé, vous pouvez vous rendre dans le fichier autosigned.key ($HOME/autosigned.key)  pour retrouver votre clé.
+
+### 3.6 Installation de NextCloud
+
+
+ 
