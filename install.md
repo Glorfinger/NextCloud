@@ -37,9 +37,9 @@ SSH : 'git@github.com:Glorfinger/NextCloud.git'
 
 ## Ufw.sh
  - Configuration des ports :
-  * ssh
-  * http
-  * https
+   * ssh
+   * http
+   * https
 
 ## NextCloud.sh
 - Installation MariaBD-server
