@@ -38,7 +38,7 @@ Support Technique
 7.3 Mises à jour futures
 
 
-###Introduction
+### Introduction
  ## 1.1 À propos du script
 Bienvenue dans le guide de l'utilisateur de notre Script NextCloud. Ce script a été conçu pour configurer votre environnement et installer NextCloud.
 
