@@ -38,11 +38,11 @@ Support Technique
 7.3 Mises à jour futures
 
 
-### Introduction
- ## 1.1 À propos du script
+## Introduction
+ ### 1.1 À propos du script
 Bienvenue dans le guide de l'utilisateur de notre Script NextCloud. Ce script a été conçu pour configurer votre environnement et installer NextCloud.
 
- ## 1.2 Configuration système requise
+ ### 1.2 Configuration système requise
 Avant d'installer le script, assurez-vous que votre système répond aux exigences minimales suivantes : 
   * Systeme d'exploitation : Ubuntu version 11
   * Un accès internet.
