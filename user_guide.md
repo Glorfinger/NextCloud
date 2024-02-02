@@ -1,32 +1,32 @@
 ## Guide de l'Utilisateur - Nextcloud Script
 ### Table des matières
 
-Introduction
- 1.1 À propos du script
- 1.2 Configuration système requise
+## Introduction
+ * 1.1 À propos du script
+ * 1.2 Configuration système requise
 
-Installation
- 2.1 Téléchargement
- 2.2 Installation du script
- 2.3 Configuration initiale
+## Installation
+ * 2.1 Téléchargement
+ * 2.2 Installation du script
+ * 2.3 Configuration initiale
 
-Premiers Pas
- 3.1 Lancement du script
- 3.2 Interface utilisateur
- 3.3 Paramètres de base
+## Premiers Pas
+ * 3.1 Lancement du script
+ * 3.2 Interface utilisateur
+ * 3.3 Paramètres de base
 
-Fonctionnalités Principales
- 4.1 [Nom de la première fonctionnalité]
- 4.1.1 Configuration
- 4.1.2 Utilisation
- 4.2 [Nom de la deuxième fonctionnalité]
- 4.2.1 Configuration
- 4.2.2 Utilisation
+## Fonctionnalités Principales
+ * 4.1 [Nom de la première fonctionnalité]
+ * 4.1.1 Configuration
+ * 4.1.2 Utilisation
+ * 4.2 [Nom de la deuxième fonctionnalité]
+ * 4.2.1 Configuration
+ * 4.2.2 Utilisation
 
-Astuces et Conseils
-5.1 Optimisation des performances
-5.2 Dépannage courant
-5.3 Raccourcis clavier
+## Astuces et Conseils
+ * 5.1 Optimisation des performances
+ * 5.2 Dépannage courant
+ * 5.3 Raccourcis clavier
 FAQ
 
 6.1 Questions fréquemment posées
