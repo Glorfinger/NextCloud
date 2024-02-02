@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Installation openssl 
-apt install openssl
+sudo apt install openssl
 
 # Variables
 CERT_PATH="/etc/ssl/autosigned.crt"
 KEY_PATH="/etc/ssl/autosigned.key"
 
 # Création du certificat auto-signé sans dns 
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${KEY_PATH} -out ${CERT_PATH} -subj "/C=FR/ST=State/L=City/O=Organization/CN="
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${KEY_PATH} -out ${CERT_PATH} -subj "/C=FR/ST=State/L=City/O=Organization/CN="
 
 
 # Afficher le certificat généré
-cat ${CERT_PATH}
+sudo cat ${CERT_PATH}
 
 # Afficher la clé privée générée
-cat ${KEY_PATH}
+sudo cat ${KEY_PATH}
