@@ -36,6 +36,14 @@ sudo chown -R www-data:www-data /var/www/html/nextcloud
 echo
 
 echo
+echo "Redmarrage d'Apache2 en cour..."
+echo
+# Redemarage d'Apache2
+echo
+sudo systemctl reload apache2
+echo
+
+echo
 echo "Préparation de la base de donné en cours..."
 echo 
 
