@@ -19,7 +19,7 @@ echo "Installation de Nextcloud en cours..."
 echo
 
 # Telecharge Nextcloud
-wget https://download.nextcloud.com/server/releases/latest.zip
+wget -P /tmp https://download.nextcloud.com/server/releases/latest.zip
 
 # Deplace Nextcloud au bon endroit
 echo
@@ -27,7 +27,7 @@ cd /tmp
 echo
 sudo unzip latest.zip
 echo
-mv nextcloud/ /var/www/html/
+sudo mv nextcloud/ /var/www/html/
 echo
 
 # Modifier les droits de Nextcloud pour Apache2
@@ -108,11 +108,11 @@ echo
 
 # Création de la database
 echo
-sudo CREATE DATABASE db23nextcloud;
+CREATE DATABASE db23nextcloud;
 echo
-sudo GRANT ALL ON db23nextcloud.* TO 'usr23nextcloud'@'localhost' IDENTIFIED BY 'Password14';
+GRANT ALL ON db23nextcloud.* TO 'usr23nextcloud'@'localhost' IDENTIFIED BY 'Password14';
 echo
-sudo FLUSH PRIVILEGES;
+FLUSH PRIVILEGES;
 echo
 EXIT;
 echo
