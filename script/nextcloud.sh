@@ -99,7 +99,7 @@ echo "La base de données $DB_NAME a été créée avec succès pour l'utilisate
 
 echo
 echo "Nextcloud has been successfully installed."
-WANIP4='dig @resolver4.opendns.com myip.opendns.com +short -4'
+WANIP4=$(dig @resolver4.opendns.com myip.opendns.com +short -4)
 echo "Accédez à votre Nextcloud en utilisant l'adresse : http://${WANIP4}:${PORT}/nextcloud"
 
 
