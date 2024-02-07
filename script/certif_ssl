@@ -1,28 +1,32 @@
 #!/bin/bash
 
-# Vérification et création du dossier nextcloud-ssl.conf dans /etc/ssl
+echo "Vérification et création du dossier nextcloud-ssl.conf..."
 SSL_DIR="/etc/ssl/nextcloud-ssl.conf"
 if [ ! -d "$SSL_DIR" ]; then
     sudo mkdir -p "$SSL_DIR"
 fi
 
-# Installation openssl
+echo "Installation d'OpenSSL..."
 sudo apt install openssl
 
-# Variables
+echo "Création du certificat auto-signé..."
 CERT_PATH="/etc/ssl/nextcloud-ssl.conf/autosigned.crt"
 KEY_PATH="/etc/ssl/nextcloud-ssl.conf/autosigned.key"
-
-# Création du certificat auto-signé sans dns
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout "${KEY_PATH}" -out "${CERT_PATH}" -subj "/C=FR/ST=State/L=City/O=Organization/CN="
 
-# Afficher le certificat généré
+echo "Affichage du certificat généré..."
 sudo cat "${CERT_PATH}"
 
-# Afficher la clé privée générée
+echo "Affichage de la clé privée générée..."
 sudo cat "${KEY_PATH}"
 
-# Modification du chemin des fichiers dans nextcloud-ssl.conf
+echo "Modification du chemin des fichiers dans nextcloud-ssl.conf..."
 NEXTCLOUD_SSL_CONF="/etc/apache2/sites-available/nextcloud-ssl.conf"
 sudo sed -i "s|SSLCertificateFile.*|SSLCertificateFile ${CERT_PATH}|" "$NEXTCLOUD_SSL_CONF"
 sudo sed -i "s|SSLCertificateKeyFile.*|SSLCertificateKeyFile ${KEY_PATH}|" "$NEXTCLOUD_SSL_CONF"
+
+echo "Redémarrage d'Apache..."
+echo
+sudo service apache2 restart 
+
+echo "Apache a été redémarré avec succès."
