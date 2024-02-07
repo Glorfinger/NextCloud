@@ -39,8 +39,10 @@ echo
 echo
 sudo touch /etc/apache2/sites-available/nextcloud.conf
 echo
+# Récupérer du numéro de port précedemment renseigné
+PORT=$(grep -oP '(?<=<VirtualHost \*\:)\d+' /etc/apache2/sites-enabled/000-default.conf)
 sudo tee /etc/apache2/sites-available/nextcloud.conf > /dev/null <<EOF
-<VirtualHost *:{http_port}>
+<VirtualHost *:${PORT}>
   DocumentRoot /var/www/nextcloud/
   ServerName  
 
