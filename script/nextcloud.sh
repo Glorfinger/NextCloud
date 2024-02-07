@@ -75,26 +75,28 @@ echo
 echo
 echo "Préparation de la base de donné en cours..."
 echo 
-read -p "Choisissez un mot de passe" DB_PASSWORD
+read -p "Choisissez un nom d'utilisateur : " DB_USER
 echo
-read -p "Choisissez un nom d'utilisateur" DB_USER
+read -p "Choisissez un mot de passe : " DB_PASSWORD
+echo
+read -p "Choisissez un nom de base de donnés : " DB_NAME
 echo
 mysql --user=root <<-EOF
-SET PASSWORD FOR 'root'@'localhost' = PASSWORD( '$DB_PASSWORD' );
-DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
-DELETE FROM mysql.user WHERE User='';
-DELETE FROM mysql.db WHERE Db='test' OR Db='test_%';
-FLUSH PRIVILEGES;
+sudo SET PASSWORD FOR 'root'@'localhost' = PASSWORD( '$DB_PASSWORD' );
+sudo DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
+sudo DELETE FROM mysql.user WHERE User='';
+sudo DELETE FROM mysql.db WHERE Db='test' OR Db='test_%';
+sudo FLUSH PRIVILEGES;
 EOF
 echo
 mysql --user=root --password="$DB_PASSWORD" <<-EOF
-CREATE DATABASE nextcloud;
-CREATE USER '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD';
-GRANT ALL PRIVILEGES ON nextcloud.* TO '$DB_USER'@"localhost";
-FLUSH PRIVILEGES;
+sudo CREATE DATABASE '$DB_NAME';
+sudo CREATE USER '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD';
+sudo GRANT ALL PRIVILEGES ON nextcloud.* TO '$DB_USER'@"localhost";
+sudo FLUSH PRIVILEGES;
 EOF
 echo
-echo "La base de données nextcloud a été créée avec succès pour l'utilisateur $DB_USER."
+echo "La base de données $DB_NAME a été créée avec succès pour l'utilisateur $DB_USER."
 
 echo
 echo "Nextcloud has been successfully installed."
