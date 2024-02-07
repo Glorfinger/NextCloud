@@ -78,20 +78,6 @@ echo
 sudo mysql_secure_installation
 echo
 
-# Demander les ports HTTP et HTTPS
-echo
-read -p "Veuillez entrer le port HTTP que vous souhaitez utiliser (par défaut 80) : " http_port
-echo
-
-# Vérifier si les ports sont vides, si c'est le cas, affecter les valeurs par défaut.
-echo
-http_port=${http_port:-80}
-echo
-
-# Modifier le fichier de configuration Apache pour HTTP
-echo "Modification du fichier de configuration Apache pour HTTP..."
-sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$http_port/" /etc/apache2/sites-available/nextcloud.conf
-
 #Connexion à mysql
 echo
 sudo mysql -u root -p
