@@ -34,13 +34,12 @@ echo
 echo
 sudo chown -R www-data:www-data /var/www/html/nextcloud
 echo
-
+PORT=$(grep -oP '<VirtualHost \*:([0-9]+)' /etc/apache2/sites-enabled/000-default.conf | grep -oP '([0-9]+)')
 # Créer le fichier de configuration Nextcloud
 echo
 sudo touch /etc/apache2/sites-available/nextcloud.conf
 echo
 # Récupérer du numéro de port précedemment renseigné
-PORT=$(grep -oP '<VirtualHost \*:([0-9]+)' /etc/apache2/sites-enabled/000-default.conf | grep -oP '([0-9]+)')
 sudo tee /etc/apache2/sites-available/nextcloud.conf > /dev/null <<EOF
 <VirtualHost *:${PORT}>
   DocumentRoot /var/www/nextcloud/
