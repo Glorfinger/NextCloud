@@ -20,10 +20,10 @@ sudo cat "${CERT_PATH}"
 echo "Affichage de la clé privée générée..."
 sudo cat "${KEY_PATH}"
 
-echo "Modification du chemin des fichiers dans nextcloud-ssl.conf..."
-NEXTCLOUD_SSL_CONF="/etc/apache2/sites-available/nextcloud-ssl.conf"
-sudo sed -i "s|SSLCertificateFile.*|SSLCertificateFile ${CERT_PATH}|" "$NEXTCLOUD_SSL_CONF"
-sudo sed -i "s|SSLCertificateKeyFile.*|SSLCertificateKeyFile ${KEY_PATH}|" "$NEXTCLOUD_SSL_CONF"
+echo "Modification du chemin des fichiers dans default-ssl.conf..."
+DEFAULT_SSL_CONF="/etc/apache2/sites-available/default-ssl.conf"
+sudo sed -i "s|SSLCertificateFile.*|SSLCertificateFile ${CERT_PATH}|" "$DEFAULT_SSL_CONF"
+sudo sed -i "s|SSLCertificateKeyFile.*|SSLCertificateKeyFile ${KEY_PATH}|" "$DEFAULT_SSL_CONF"
 
 echo "Redémarrage d'Apache..."
 echo
