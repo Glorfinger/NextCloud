@@ -40,9 +40,9 @@ echo
 sudo touch /etc/apache2/sites-available/nextcloud.conf
 echo
 sudo tee /etc/apache2/sites-available/nextcloud.conf > /dev/null <<EOF
-<VirtualHost *:80>
+<VirtualHost *:8151>
   DocumentRoot /var/www/nextcloud/
-  ServerName  http_port
+  ServerName  http://176.9.10.239
 
   <Directory /var/www/nextcloud/>
     Require all granted
@@ -82,24 +82,15 @@ echo
 echo
 read -p "Veuillez entrer le port HTTP que vous souhaitez utiliser (par défaut 80) : " http_port
 echo
-read -p "Veuillez entrer le port HTTPS que vous souhaitez utiliser (par défaut 443) : " https_port
-echo
 
 # Vérifier si les ports sont vides, si c'est le cas, affecter les valeurs par défaut.
 echo
 http_port=${http_port:-80}
 echo
-https_port=${https_port:-443}
-echo
 
 # Modifier le fichier de configuration Apache pour HTTP
 echo "Modification du fichier de configuration Apache pour HTTP..."
 sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$http_port/" /etc/apache2/sites-available/nextcloud.conf
-
-# Modifier le fichier de configuration Apache pour HTTPS
-echo "Modification du fichier de configuration Apache pour HTTPS..."
-sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$https_port/" /etc/apache2/sites-available/nextcloud.conf
-
 
 #Connexion à mysql
 echo
