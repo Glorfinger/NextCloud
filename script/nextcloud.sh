@@ -99,6 +99,6 @@ echo "La base de données $DB_NAME a été créée avec succès pour l'utilisate
 
 echo
 echo "Nextcloud has been successfully installed."
-echo "Accédez à votre Nextcloud en utilisant l'adresse : http://$(hostname -I | awk '{print $1}'):$PORT/nextcloud"
+echo "Accédez à votre Nextcloud en utilisant l'adresse : http://$(hostname -I | awk '{print $1}'):${PORT}/nextcloud"
 
 
