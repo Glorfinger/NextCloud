@@ -13,11 +13,11 @@ bash "$script_folder/hardening.sh"
 echo "Exécution du script : ufw.sh"
 bash "$script_folder/ufw.sh"
 
-echo "Exécution du script : Certif_ssl"
+echo "Exécution du script : certif_ssl"
 bash "$script_folder/certif_ssl"
 
 echo "Exécution du script : mod_security"
-bash "$script_folder/certif_ssl"
+bash "$script_folder/mod_security"
 
 echo "Execution du script : nextcloud.sh"
 bash "$script_folder/nextcloud.sh"
