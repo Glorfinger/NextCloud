@@ -44,7 +44,7 @@ PORT=$(grep -oP '<VirtualHost \*:([0-9]+)' /etc/apache2/sites-enabled/000-defaul
 sudo tee /etc/apache2/sites-available/nextcloud.conf > /dev/null <<EOF
 <VirtualHost *:${PORT}>
   DocumentRoot /var/www/nextcloud/
-  ServerName  
+  ServerName  localhost
 
   <Directory /var/www/nextcloud/>
     Require all granted
@@ -71,30 +71,30 @@ echo
 sudo a2ensite nextcloud.conf
 echo
 
+# Création de la base de donné
 echo
 echo "Préparation de la base de donné en cours..."
 echo 
-
-# Securise mysql
+read -p "Choisissez un mot de passe" DB_PASSWORD
 echo
-sudo mysql_secure_installation
+read -p "Choisissez un nom d'utilisateur" DB_USER
 echo
-
-#Connexion à mysql
-echo
-sudo mysql -u root -p
-echo
-
-# Création de la database
-echo
-CREATE DATABASE db23nextcloud;
-echo
-GRANT ALL ON db23nextcloud.* TO 'usr23nextcloud'@'localhost' IDENTIFIED BY 'Password14';
-echo
+mysql --user=root <<-EOF
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD( '$DB_PASSWORD' );
+DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
+DELETE FROM mysql.user WHERE User='';
+DELETE FROM mysql.db WHERE Db='test' OR Db='test_%';
 FLUSH PRIVILEGES;
+EOF
 echo
-EXIT;
+mysql --user=root --password="$DB_PASSWORD" <<-EOF
+CREATE DATABASE nextcloud;
+CREATE USER '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD';
+GRANT ALL PRIVILEGES ON nextcloud.* TO '$DB_USER'@"localhost";
+FLUSH PRIVILEGES;
+EOF
 echo
+echo "La base de données nextcloud a été créée avec succès pour l'utilisateur $DB_USER."
 
 echo
 echo "Nextcloud has been successfully installed."
