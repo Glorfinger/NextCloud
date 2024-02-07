@@ -40,9 +40,9 @@ echo
 sudo touch /etc/apache2/sites-available/nextcloud.conf
 echo
 sudo tee /etc/apache2/sites-available/nextcloud.conf > /dev/null <<EOF
-<VirtualHost *:8151>
+<VirtualHost *:80>
   DocumentRoot /var/www/nextcloud/
-  ServerName  http://176.9.10.239
+  ServerName  http_port
 
   <Directory /var/www/nextcloud/>
     Require all granted
