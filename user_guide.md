@@ -33,7 +33,7 @@ Commandes :
  * sh execute_script.sh
 
  ### 2.3 Configuration initiale
- * Avoir un accès internet
+ * Git installé 
 
 ## Fonctionnalités principales 
  ### 3.1 Installation d'un service web (Apache2)
