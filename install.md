@@ -1,4 +1,4 @@
-## Prérequis : 
+## Prérequuuuuuuuis : 
 * un terminal fonctionnel
 * GIT . (Installation GIT : $ sudo apt install git-all)
 
