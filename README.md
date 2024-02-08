@@ -9,7 +9,8 @@ Besoins initiaux : besoins du projet
 
 ## 🤓 Les membres du groupe : 
 * Joss Lenoir
-* Etienne Chamarier
+* Etienne Chamarier ![image](https://github.com/Glorfinger/NextCloud/assets/126485152/099bbcd6-c785-44a4-b0b5-00038944ef6b)
+
 
  ## 🛠 Choix techniques : 
 * Ubuntu 23.10
