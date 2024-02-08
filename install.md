@@ -9,9 +9,9 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 HTTPS : 'https://github.com/Glorfinger/NextCloud.git'
 SSH : 'git@github.com:Glorfinger/NextCloud.git'
 
-### Modules installés :
+## Modules installés :
 
-## Apache.sh
+### Apache.sh
 - Configuration apache2 :
  * a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
  * a2enmod headers (https://httpd.apache.org/docs/2.4/mod/mod_headers.html)
@@ -21,7 +21,7 @@ SSH : 'git@github.com:Glorfinger/NextCloud.git'
  * a2enmod ssl (https://httpd.apache.org/docs/2.4/mod/mod_ssl.html)
  * a2ensite default-ssl
 
-## Hardening.sh
+### Hardening.sh
 - Configuration fichier Hardening :
   * 'PermitRootLogin no' : Interdit la connexion au 'root' via le SSH.
   * 'MaxAuthTries 3' : Limite le nombre de tentatives d'authentification en SSH à 3.
@@ -35,13 +35,13 @@ SSH : 'git@github.com:Glorfinger/NextCloud.git'
   * DebianBanner no : Supprime l'affichage de la bannière Debian lors de la connexion.
 
 
-## Ufw.sh
+### Ufw.sh
  - Configuration des ports :
    * ssh
    * http
    * https
 
-## NextCloud.sh
+### NextCloud.sh
 - Installation MariaBD-server
 - libapache2-mod-php8.2
 - imagemagick
