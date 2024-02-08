@@ -7,11 +7,15 @@ Déploiement automatisé dédié à l’hébergement d’un service Nextcloud é
 ####
 Besoins initiaux : besoins du projet
 
-## Les membres du groupe : Etienne Chamarier / Joss Lenoir
+## Les membres du groupe : 
+* Etienne Chamarier
+* Joss Lenoir
 
-## Choix techniques : Ubuntu 23.10
+## Choix techniques : 
+* Ubuntu 23.10
 
-## Difficultés rencontrées : problèmes techniques rencontrés
+## Difficultés rencontrées : 
+* problèmes techniques rencontrés
 
 ## Solutions trouvées : Solutions et alternatives trouvées
 
