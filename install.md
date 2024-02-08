@@ -31,8 +31,8 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
   * 'ChallengeResponseAuthentication no' -- Désactive l'authenfication basée sur les défis. (séries de questions visant à prouver son identité) - https://www.techtarget.com/searchsecurity/definition/challenge-response-system
   * 'KerberosAuthentication no' -- Désactive l'authentification Kerberos (protocole d'authentification). - 'https://www.varonis.com/blog/kerberos-authentication-explained'
   * 'X11Forwarding no' -- Désactive la possibilité de transférer les connexions X11. - 'https://goteleport.com/blog/x11-forwarding/'
-  * PermitUserEnvironment no -- Interdit la personnalisation de l'environnement.
-  * DebianBanner no -- Supprime l'affichage de la bannière Debian lors de la connexion.
+  * 'PermitUserEnvironment no' -- Interdit la personnalisation de l'environnement.
+  * 'DebianBanner no' -- Supprime l'affichage de la bannière Debian lors de la connexion.
 
 
 ### - Ufw.sh
