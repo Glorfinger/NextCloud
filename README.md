@@ -11,7 +11,7 @@ Besoins initiaux : besoins du projet
 * Joss Lenoir
 * Etienne Chamarier
 
-## Choix techniques : 
+## 🛠 Choix techniques : 
 * Ubuntu 23.10
 
 ## Difficultés rencontrées : 
