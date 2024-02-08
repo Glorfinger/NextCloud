@@ -10,8 +10,8 @@ echo
 # Install necessary packages
 echo
 echo "Installation des packages nécessaires en cours..."
-sudo apt-get install mariadb-server php8.2 php8.2-common php8.2-curl php8.2-gd php8.2-intl php8.2-mbstring php8.2-xmlrpc php8.2-mysql php8.2-xml php8.2-cli php8.2-zip
-sudo apt-get install wget unzip dnsutils
+sudo apt-get install -y mariadb-server php8.2 php8.2-common php8.2-curl php8.2-gd php8.2-intl php8.2-mbstring php8.2-xmlrpc php8.2-mysql php8.2-xml php8.2-cli php8.2-zip
+sudo apt-get install -y wget unzip dnsutils
 echo
 
 # Télécharge Nextcloud
