@@ -1,6 +1,6 @@
 
 ## Introduction
- ### 1.1 À propos du script
+ ### 1.1 À propos
 Bienvenue dans le guide de l'utilisateur de notre Script NextCloud. Ce script a été conçu pour configurer votre environnement et installer NextCloud.
 
  ### 1.2 Configuration système requise
