@@ -23,20 +23,20 @@ If that is not possible, once the script is cloned to your machine, please follo
 * Navigate to the execute_script.sh file
 * Modify the path on line 4 'script_folder="your/path/to/the/script/"
 * Save the modifications.
-* Run the execute_script.sh script  
-Commands:
+* Run the execute_script.sh script    
+## Commands:
 
 * ./execute_script.sh
 * bash execute_script.sh
 * sh execute_script.sh  
-- 2.3 Initial Configuration  
+## 2.3 Initial Configuration  
 * Git installed
 * Main Features  
-- 3.1 Installation of a web service (Apache2)  
-- 3.2 Apache2 Configuration  
+## 3.1 Installation of a web service (Apache2)  
+## 3.2 Apache2 Configuration  
 * a2enmod
 * a2ensite  
-- 3.3 Hardening Configuration  
+## 3.3 Hardening Configuration  
 For hardening configuration, we have created a configuration file in '/etc/ssh/sshd_config.d/hardening.conf'.  
 ⚠️ Each time the script is used, the Hardening file will be reset.
 
