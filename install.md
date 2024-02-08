@@ -12,7 +12,7 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 ## Modules installés :
 
 ### - Apache.sh
-- Configuration apache2 :
+Configuration apache2 :
  * a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
  * a2enmod headers (https://httpd.apache.org/docs/2.4/mod/mod_headers.html)
  * a2enmod env (https://httpd.apache.org/docs/2.4/mod/mod_env.html)
