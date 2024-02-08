@@ -16,6 +16,13 @@ Pour télécharger notre script, vous pouvez vous rendre directement sur https:/
 
  ### 2.2 Installation du script
 Une fois le repos cloné sur votre machine, vous devez vous rendre dans le dossier où vous venez de cloner le repos 'NextCloud > Script'  et exécuter le script 'execute_script.sh'. 
+⚠️Il est recommandé de créer un dossier 'bashScript' dans $HOME et de le cloner à l'intérieur. 
+
+Si ce n'est pas possible, une fois le script clone sur mon machine, veuillez suivre la démarche suivante :
+* Se rendre dans le fichier execute_script.sh
+* Modifier le chemin de la ligne 4 'script_folder="votre/chemin/vers/le/script/"
+* Enregistrer les modifications.
+* Lancer le script execute_script.sh
 
 Commandes :
  * ./execute_script.sh
