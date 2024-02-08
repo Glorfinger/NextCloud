@@ -11,7 +11,7 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 
 ## Modules installés :
 
-### - Apache.sh
+### Apache.sh
 Configuration apache2 :
  * a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
  * a2enmod headers (https://httpd.apache.org/docs/2.4/mod/mod_headers.html)
@@ -21,8 +21,8 @@ Configuration apache2 :
  * a2enmod ssl (https://httpd.apache.org/docs/2.4/mod/mod_ssl.html)
  * a2ensite default-ssl
 
-### - Hardening.sh
-- Configuration fichier Hardening :
+### Hardening.sh
+Configuration fichier Hardening :
   * 'PermitRootLogin no' -- Interdit la connexion au 'root' via le SSH.
   * 'MaxAuthTries 3' -- Limite le nombre de tentatives d'authentification en SSH à 3.
   * 'LoginGraceTime 20' -- Période de 20 secondes pendant lesquelles l'utilisateur doit se connecter après avoir établi sa connexion SSH.
@@ -35,14 +35,14 @@ Configuration apache2 :
   * 'DebianBanner no' -- Supprime l'affichage de la bannière Debian lors de la connexion.
 
 
-### - Ufw.sh
- - Configuration des ports :
+### Ufw.sh
+Configuration des ports :
    * ssh
    * http
    * https
 
-### - NextCloud.sh
- - Installation des packages
+### NextCloud.sh
+Installation des packages
    * mariadb-server
    * php8.2
    * php8.2-common
