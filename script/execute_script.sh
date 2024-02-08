@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Chemin vers le dossier contenant les scripts
-script_folder="/home/etienne/bashScript/NextCloud/script"
+script_folder="$HOME/bashScript/NextCloud/script"
 
 # Exécution des scripts dans l'ordre
 echo "Exécution du script : apache.sh"
