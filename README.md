@@ -22,7 +22,7 @@ Besoins initiaux : besoins du projet
 * Installation du package dnsutils pour recupérer l'adresse via WANIP4
 * 
 
-## Tests réalisés : description des tests de performance, de sécurité, etc.
+## 🧪 Tests réalisés : description des tests de performance, de sécurité, etc.
 
 ## Résultats obtenus : ce qui a fonctionné
 
