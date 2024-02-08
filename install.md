@@ -9,6 +9,16 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 * HTTPS : 'https://github.com/Glorfinger/NextCloud.git'
 * SSH : 'git@github.com:Glorfinger/NextCloud.git'
 
+## Configuration des ports avec UFW : 
+* Configuration du port SSH, si champs vide pour 22 par défaut.
+  - # Modifier le fichier de configuration SSH
+echo "Modification du fichier de configuration SSH..."
+sudo sed -i "s/^\(Port \)[0-9]\+/\1$ssh_port/" /etc/ssh/sshd_config****
+* Configuration du port HTTP, si champs vide pour 80 par défaut.
+* Configuration du port HTTPS, si champs vide pour 443 par défaut.
+  
+
+
 ## Installed modules :
 
 ### Apache.sh
