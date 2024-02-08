@@ -18,7 +18,7 @@ Besoins initiaux : besoins du projet
 * Récupération de l'addresse de connexion à Nextcloud
 * Paramétrage du mod_security
 
-## Solutions trouvées : Solutions et alternatives trouvées
+## 🤩 Solutions trouvées : Solutions et alternatives trouvées
 * Installation du package dnsutils pour recupérer l'adresse via WANIP4
 * 
 
