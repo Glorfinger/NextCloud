@@ -1,26 +1,26 @@
 #!/bin/bash
 
-# Update package lists
+# Mise à jour système
 echo
 echo "Mise à jour des listes de paquets en cours..."
 sudo apt-get update
 sudo apt-get upgrade
 echo
 
-# Install necessary packages
+# Installation des packages nécessaires
 echo
 echo "Installation des packages nécessaires en cours..."
 sudo apt-get install -y mariadb-server php8.2 php8.2-common php8.2-curl php8.2-gd php8.2-intl php8.2-mbstring php8.2-xmlrpc php8.2-mysql php8.2-xml php8.2-cli php8.2-zip
 sudo apt-get install -y wget unzip dnsutils
 echo
 
-# Télécharge Nextcloud
+# Téléchargement de Nextcloud
 echo
 echo "Téléchargement de Nextcloud..."
 wget -P /tmp https://download.nextcloud.com/server/releases/latest.zip
 echo
 
-# Déplace Nextcloud au bon endroit
+# Déplacer Nextcloud
 echo
 echo "Déplacement de Nextcloud vers le répertoire d'installation..."
 cd /tmp
@@ -60,7 +60,8 @@ EOF
 
 echo
 echo "Redémarrage d'Apache2..."
-# Redémarrage d'Apache2
+
+# Redémarrer d'Apache2
 sudo systemctl reload apache2
 echo
 
@@ -70,7 +71,7 @@ echo "Activation de la configuration pour Nextcloud..."
 sudo a2ensite nextcloud.conf
 echo
 
-# Préparation de la base de données
+# Création de la base de données
 echo
 echo "Préparation de la base de données..."
 echo 
