@@ -14,7 +14,8 @@ Besoins initiaux : besoins du projet
  ## 🛠 Choix techniques : 
 * Ubuntu 23.10
 
-## Difficultés rencontrées : 
+## ![image](https://github.com/Glorfinger/NextCloud/assets/126485152/7288cef9-805d-45f1-b3e1-c84ac8114ccf)
+ Difficultés rencontrées : 
 * Récupération de l'addresse de connexion à Nextcloud
 * Paramétrage du mod_security
 
