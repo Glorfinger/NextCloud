@@ -1,4 +1,5 @@
-Prérequis : Pour utiliser notre script, vous devez avoir un terminal fonctionnel et GIT d'installer.
+## Prérequis : 
+Pour utiliser notre script, vous devez avoir un terminal fonctionnel et GIT d'installer.
 
 Installation GIT : $ sudo apt install git-all
 
