@@ -16,16 +16,22 @@ Besoins initiaux : besoins du projet
 
 ## Difficultés rencontrées : 
 * Récupération de l'addresse de connexion à Nextcloud
-* Paramétrage mod_security
+* Paramétrage du mod_security
 
 ## Solutions trouvées : Solutions et alternatives trouvées
 * Installation du package dnsutils pour recupérer l'adresse via WANIP4
+* 
 
 ## Tests réalisés : description des tests de performance, de sécurité, etc.
 
 ## Résultats obtenus : ce qui a fonctionné
 
 ## Améliorations possibles : 
+* Ajouter des progress_bar pour fludifier le script.
+* Création d'un compte utilisateur NextCloud en fin de script
+* Simplifier l'utilisation du script. (simplifier le lancement du script)
+* Création d'un DNS et d'un certificat SSL conforme (Let's Encrypt)
+* Adapter le script pour d'autres configurations type windows
 
 
 ####
