@@ -4,8 +4,6 @@ Déploiement automatisé dédié à l’hébergement d’un service Nextcloud é
 
 📢 Note: Ce projet connu sous le nom de nextcloud_install_production a été renommé pour le dissocier du serveur Nextcloud officiel dans le but d’éviter les confusions et droit d’auteur.
 
-####
-Besoins initiaux : besoins du projet
 
 ## 🤓 Les membres du groupe : 
 * Joss Lenoir
@@ -39,11 +37,6 @@ Besoins initiaux : besoins du projet
 * Création d'un DNS et d'un certificat SSL conforme (Let's Encrypt)
 * Adapter le script pour d'autres configurations type windows
 
-
-####
-Pour ce premier projet d’étude d’administrateur système devops, notre groupe, composé d’Etienne Chamarier et Joss Lenoir, avons réalisé un scripte permettant le déploiement automatisé d’un service Nextcloud. 
-Nous avons travaillé sur une machine virtuelle Ubuntu distante pour réaliser les testes.
-####
 
 * Apache.sh
  - installation apache2
