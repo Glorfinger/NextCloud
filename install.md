@@ -11,13 +11,13 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 
 ## Configuration des ports avec UFW : 
 * Configuration du port SSH, si champs vide pour 22 par défaut.  
--- sudo sed -i "s/^\(Port \)[0-9]\+/\1$ssh_port/" /etc/ssh/sshd_config****
+--sudo sed -i "s/^\(Port \)[0-9]\+/\1$ssh_port/" /etc/ssh/sshd_config****
 
 * Configuration du port HTTP, si champs vide pour 80 par défaut.  
--- sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$http_port/" /etc/apache2/sites-enabled/000-default.conf
+"sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$http_port/" /etc/apache2/sites-enabled/000-default.conf"
 
 * Configuration du port HTTPS, si champs vide pour 443 par défaut.  
--- sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$https_port/" /etc/apache2/sites-enabled/default-ssl.conf  
+'sudo sed -i "s/^\(<VirtualHost \*\):\([0-9]\+\)/\1:$https_port/" /etc/apache2/sites-enabled/default-ssl.conf'
 
 
 ## Installed modules :
