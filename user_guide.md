@@ -20,7 +20,7 @@ Avant d'installer le script, assurez-vous que votre système répond aux exigenc
 
 ## Installation
  ### 2.1 Téléchargement
-Pour télécharger notre script, vous pouvez vous rendre directement sur https://github.com/Glorfinger/NextCloud/ et clone le repos sur votre machine en utilisant ces liens : 
+Pour télécharger notre script, vous pouvez vous rendre directement sur https://github.com/Glorfinger/NextCloud/ et cloner le repos sur votre machine en utilisant ces liens : 
  * https : 'https://github.com/Glorfinger/NextCloud.git'
  * ssh : 'git@github.com:Glorfinger/NextCloud.git'
 
@@ -42,7 +42,8 @@ Commandes :
   * a2ensite
     
  ### 3.3 Configuration du Hardening
- Pour la configuration du hardening, nous avons créer un fichier de configuration dans  '/etc/ssh/sshd_config.d/hardening.conf'. ATTENTION : à chaque utilisation du script, le fichier Hardening sera réinitiallisé.
+ Pour la configuration du hardening, nous avons créer un fichier de configuration dans  '/etc/ssh/sshd_config.d/hardening.conf'. 
+ ⚠️ A chaque utilisation du script, le fichier Hardening sera réinitiallisé.
  
  Configuration du Hardening : 
   * PermitRootLogin no
@@ -57,12 +58,13 @@ Commandes :
   * DebianBanner no
 
 ### 3.4 Installation d'UFW
-Installation d'UFW pour configurer le pare-feu. ATTENTION : lors de l'installation d'ufw, il vous sera demandé de saisir le port que vous souhaitez utilisé pour SSH , HTTP et HTTPS. 
+Installation d'UFW pour configurer le pare-feu. 
+⚠️ Lors de l'installation d'ufw, il vous sera demandé de saisir le port que vous souhaitez utilisé pour SSH , HTTP et HTTPS. 
 
 ### 3.5 Installation d'un certification Auto signé.
 Installation d'OPENSLL pour gérer la création des certificats SSL. Si vous avez oublié de noté la clé, vous pouvez vous rendre dans le fichier autosigned.key ($HOME/autosigned.key)  pour retrouver votre clé.
 
-### 3.6 Installation de NextCloud
-
+### 3.6 Telechargement de NextCloud
+Les droits d'utilisateur et le chemin d'installation de Nextcloud sont paramétrés lors du téléchargement. Un fichier /etc/apache2/sites-available/nextcloud.conf est créé et paramétré, puis on créé la base de données.    
 
  
