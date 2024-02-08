@@ -36,19 +36,3 @@ Déploiement automatisé dédié à l’hébergement d’un service Nextcloud é
 * Simplifier l'utilisation du script. (simplifier le lancement du script)
 * Création d'un DNS et d'un certificat SSL conforme (Let's Encrypt)
 * Adapter le script pour d'autres configurations type windows
-
-
-* Apache.sh
- - installation apache2
-
-* Hardening.sh 
- - configuration du fichier sshd_config.d
-
-* ufw.sh
- - installation d'ufw
-
-* certif_ssl.sh
-  - création d'un certificat ssl auto-signé
-
-NextCloud.sh
- - installation du service et ses dépendances
