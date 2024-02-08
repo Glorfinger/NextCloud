@@ -26,6 +26,7 @@ Besoins initiaux : besoins du projet
 ## 🧪 Tests réalisés : 
 * Apache2 : Vérification du status 'systemctl status apache2' et des logs 'sudo journalctl -xeu apache2'
 * UFW : Vérification du status 'systemctl status UFW'
+* Hardening : Vérification de la création du fichier de configuration et de son contenu.
 
 
 
