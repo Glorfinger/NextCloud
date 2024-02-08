@@ -1,18 +1,18 @@
-## Prérequuuuuuuuis : 
-* un terminal fonctionnel
-* GIT . (Installation GIT : $ sudo apt install git-all)
+## Prérequisites : 
+* a functionnal terminal
+* GIT . (GIT installation : $ sudo apt install git-all)
 
-## Récupération du script : 
+## Retrieving the script : 
 
 $ git clone https://github.com/Glorfinger/NextCloud.git
 
 * HTTPS : 'https://github.com/Glorfinger/NextCloud.git'
 * SSH : 'git@github.com:Glorfinger/NextCloud.git'
 
-## Modules installés :
+## Installed modules :
 
 ### Apache.sh
-- Configuration apache2 :
+1- Apache2 configuration :
  * a2enmod rewrite (https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
  * a2enmod headers (https://httpd.apache.org/docs/2.4/mod/mod_headers.html)
  * a2enmod env (https://httpd.apache.org/docs/2.4/mod/mod_env.html)
@@ -22,33 +22,28 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
  * a2ensite default-ssl
 
 ### Hardening.sh
-- Configuration fichier Hardening :
-  * 'PermitRootLogin no' -- Interdit la connexion au 'root' via le SSH.
-  * 'MaxAuthTries 3' -- Limite le nombre de tentatives d'authentification en SSH à 3.
-  * 'LoginGraceTime 20' -- Période de 20 secondes pendant lesquelles l'utilisateur doit se connecter après avoir établi sa connexion SSH.
-  * 'PermitEmptyPasswords no' -- Empêche la connexion avec des mots de passe vides.
-  * 'PasswordAuthentication no' -- Désaction l'authentification par mot de passe.
-  * 'ChallengeResponseAuthentication no' -- Désactive l'authenfication basée sur les défis. (séries de questions visant à prouver son identité) - https://www.techtarget.com/searchsecurity/definition/challenge-response-system
-  * 'KerberosAuthentication no' -- Désactive l'authentification Kerberos (protocole d'authentification). - 'https://www.varonis.com/blog/kerberos-authentication-explained'
-  * 'X11Forwarding no' -- Désactive la possibilité de transférer les connexions X11. - 'https://goteleport.com/blog/x11-forwarding/'
-  * 'PermitUserEnvironment no' -- Interdit la personnalisation de l'environnement.
-  * 'DebianBanner no' -- Supprime l'affichage de la bannière Debian lors de la connexion.
+2- Hardening file configuration :
+  * 'PermitRootLogin no' -- Disallows root login via SSH.
+  * 'MaxAuthTries 3' -- Limits SSH authentication attempts to 3.
+  * 'LoginGraceTime 20' -- 20-second period during which the user must login after establishing an SSH connection.
+  * 'PermitEmptyPasswords no' -- Prevents login with empty passwords.
+  * 'PasswordAuthentication no' -- Disables password authentication.
+  * 'ChallengeResponseAuthentication no' -- Disables challenge-response authentication. (series of questions to prove identity) - https://www.techtarget.com/searchsecurity/definition/challenge-response-system
+  * 'KerberosAuthentication no' -- Disables Kerberos authentication (authentication protocol).  
+  * 'https://www.varonis.com/blog/kerberos-authentication-explained'
+  * 'X11Forwarding no' -- Disables the ability to forward X11 connections. - 'https://goteleport.com/blog/x11-forwarding/'
+  * 'PermitUserEnvironment no' -- Disallows environment customization.
+  * 'DebianBanner no' -- Suppresses Debian banner display upon login.
 
 
 ### Ufw.sh
-- Configuration des ports :
+3- Port configuration
    * ssh
    * http
    * https
 
-### mod_security.sh
-- Installation du module Apache2 mod_sercurity
-  * Copie du fichier de configuration par defaut '/etc/modsecurity/modsecurity.conf-recommended'
- 
-
-
 ### NextCloud.sh
-- Installation des packages
+4- Installation of packages :
    * mariadb-server
    * php8.2
    * php8.2-common
@@ -65,6 +60,6 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
    * unzip
    * dnsutils
      
- - Telechargement de Nextcloud
+ 5- Nextcloud download :
    * https://download.nextcloud.com/server/releases/latest.zip
      
