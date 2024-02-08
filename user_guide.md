@@ -42,7 +42,7 @@ Commandes :
   * a2ensite
     
  ### 3.3 Configuration du Hardening
- Pour la configuration du hardening, nous avons créer un fichier de configuration dans  '/etc/ssh/sshd_config.d/hardening.conf'. 
+ Pour la configuration du hardening, nous avons créer un fichier de configuration dans  '/etc/ssh/sshd_config.d/hardening.conf'.   
  ⚠️ A chaque utilisation du script, le fichier Hardening sera réinitiallisé.
  
  Configuration du Hardening : 
