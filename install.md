@@ -23,16 +23,16 @@ $ git clone https://github.com/Glorfinger/NextCloud.git
 
 ### - Hardening.sh
 - Configuration fichier Hardening :
-  * 'PermitRootLogin no' : Interdit la connexion au 'root' via le SSH.
-  * 'MaxAuthTries 3' : Limite le nombre de tentatives d'authentification en SSH à 3.
-  * 'LoginGraceTime 20' : Période de 20 secondes pendant lesquelles l'utilisateur doit se connecter après avoir établi sa connexion SSH.
-  * 'PermitEmptyPasswords no' : Empêche la connexion avec des mots de passe vides.
-  * 'PasswordAuthentication no' : Désaction l'authentification par mot de passe.
-  * 'ChallengeResponseAuthentication no' : Désactive l'authenfication basée sur les défis. (séries de questions visant à prouver son identité) - https://www.techtarget.com/searchsecurity/definition/challenge-response-system
-  * 'KerberosAuthentication no' : Désactive l'authentification Kerberos (protocole d'authentification). - 'https://www.varonis.com/blog/kerberos-authentication-explained'
-  * 'X11Forwarding no' : Désactive la possibilité de transférer les connexions X11. - 'https://goteleport.com/blog/x11-forwarding/'
-  * PermitUserEnvironment no : Interdit la personnalisation de l'environnement.
-  * DebianBanner no : Supprime l'affichage de la bannière Debian lors de la connexion.
+  * 'PermitRootLogin no' -- Interdit la connexion au 'root' via le SSH.
+  * 'MaxAuthTries 3' -- Limite le nombre de tentatives d'authentification en SSH à 3.
+  * 'LoginGraceTime 20' -- Période de 20 secondes pendant lesquelles l'utilisateur doit se connecter après avoir établi sa connexion SSH.
+  * 'PermitEmptyPasswords no' -- Empêche la connexion avec des mots de passe vides.
+  * 'PasswordAuthentication no' -- Désaction l'authentification par mot de passe.
+  * 'ChallengeResponseAuthentication no' -- Désactive l'authenfication basée sur les défis. (séries de questions visant à prouver son identité) - https://www.techtarget.com/searchsecurity/definition/challenge-response-system
+  * 'KerberosAuthentication no' -- Désactive l'authentification Kerberos (protocole d'authentification). - 'https://www.varonis.com/blog/kerberos-authentication-explained'
+  * 'X11Forwarding no' -- Désactive la possibilité de transférer les connexions X11. - 'https://goteleport.com/blog/x11-forwarding/'
+  * PermitUserEnvironment no -- Interdit la personnalisation de l'environnement.
+  * DebianBanner no -- Supprime l'affichage de la bannière Debian lors de la connexion.
 
 
 ### - Ufw.sh
