@@ -58,7 +58,7 @@ Commandes :
   * DebianBanner no
 
 ### 3.4 Installation d'UFW
-Installation d'UFW pour configurer le pare-feu. 
+Installation d'UFW pour configurer le pare-feu.   
 ⚠️ Lors de l'installation d'ufw, il vous sera demandé de saisir le port que vous souhaitez utilisé pour SSH , HTTP et HTTPS. 
 
 ### 3.5 Installation d'un certification Auto signé.
