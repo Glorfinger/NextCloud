@@ -15,9 +15,10 @@ Besoins initiaux : besoins du projet
 * Ubuntu 23.10
 
 ## Difficultés rencontrées : 
-* problèmes techniques rencontrés
+* Récupération de l'addresse de connexion à Nextcloud
 
 ## Solutions trouvées : Solutions et alternatives trouvées
+* Installation du package dnsutils pour recupérer l'adresse via WANIP4
 
 ## Tests réalisés : description des tests de performance, de sécurité, etc.
 
