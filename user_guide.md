@@ -31,7 +31,7 @@ Commandes :
  * sh execute_script.sh
 
  ### 2.3 Configuration initiale
- * Git installé 
+ * Git doit être installé sur votre machine 
 
 ## Fonctionnalités principales 
  ### 3.1 Installation d'un service web (Apache2)
