@@ -1,4 +1,4 @@
-Introduction
+##Introduction
 1.1 About
 Welcome to the user guide for our NextCloud Script. This script is designed to configure your environment and install the NextCloud service.
 
