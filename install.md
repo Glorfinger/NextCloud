@@ -1,9 +1,8 @@
 ## Prérequis : 
-Pour utiliser notre script, vous devez avoir un terminal fonctionnel et GIT d'installer.
+* un terminal fonctionnel
+* GIT . (Installation GIT : $ sudo apt install git-all)
 
-Installation GIT : $ sudo apt install git-all
-
-Une fois git installé, vous devez cloner le repos NextToCloud :
+## Récupération du script : 
 
 $ git clone https://github.com/Glorfinger/NextCloud.git
 
