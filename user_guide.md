@@ -65,7 +65,7 @@ Installation d'OPENSLL pour gérer la création des certificats SSL. Si vous ave
 ### 3.6 Telechargement de NextCloud
 Les droits d'utilisateur et le chemin d'installation de Nextcloud sont paramétrés lors du téléchargement. Un fichier /etc/apache2/sites-available/nextcloud.conf est créé et paramétré, puis on créé la base de données.   
 
-## 3.7 Installed modules :
+## Installed modules :
 
 ### Apache.sh
 1- Apache2 configuration :
