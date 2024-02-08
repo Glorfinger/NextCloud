@@ -8,10 +8,10 @@ Déploiement automatisé dédié à l’hébergement d’un service Nextcloud é
 Besoins initiaux : besoins du projet
 
 ## 🤓 Les membres du groupe : 
-* Joss Lenoir
+Joss Lenoir
   ![image](https://github.com/Glorfinger/NextCloud/assets/126485152/4a23416d-0581-4b6c-a3ad-19f43f9d8ec0)
 
-* Etienne Chamarier
+Etienne Chamarier
   ![image](https://github.com/Glorfinger/NextCloud/assets/126485152/099bbcd6-c785-44a4-b0b5-00038944ef6b)
 
 
