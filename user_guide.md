@@ -1,12 +1,12 @@
 ## Guide de l'Utilisateur - Nextcloud Script
 
-6.1 Questions fréquemment posées
-6.2 Ressources supplémentaires
-Support Technique
+* 6.1 Questions fréquemment posées
+* 6.2 Ressources supplémentaires
+* Support Technique
 
-7.1 Contactez-nous
-7.2 Signalement de bugs
-7.3 Mises à jour futures
+* 7.1 Contactez-nous
+* 7.2 Signalement de bugs
+* 7.3 Mises à jour futures
 
 
 ## Introduction
