@@ -19,7 +19,8 @@ Tests réalisés : description des tests de performance, de sécurité, etc.
 
 Résultats obtenus : ce qui a fonctionné
 
-Améliorations possibles : suggestions d’améliorations futures
+Améliorations possibles : 
+
 
 ####
 Pour ce premier projet d’étude d’administrateur système devops, notre groupe, composé d’Etienne Chamarier et Joss Lenoir, avons réalisé un scripte permettant le déploiement automatisé d’un service Nextcloud. 
