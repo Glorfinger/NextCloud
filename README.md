@@ -7,7 +7,7 @@ Déploiement automatisé dédié à l’hébergement d’un service Nextcloud é
 ####
 Besoins initiaux : besoins du projet
 
-## Les membres du groupe : 
+## 🤓 Les membres du groupe : 
 * Joss Lenoir
 * Etienne Chamarier
 
