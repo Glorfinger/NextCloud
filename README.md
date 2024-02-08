@@ -8,8 +8,8 @@ Déploiement automatisé dédié à l’hébergement d’un service Nextcloud é
 Besoins initiaux : besoins du projet
 
 ## Les membres du groupe : 
-* Etienne Chamarier
 * Joss Lenoir
+* Etienne Chamarier
 
 ## Choix techniques : 
 * Ubuntu 23.10
@@ -31,14 +31,17 @@ Pour ce premier projet d’étude d’administrateur système devops, notre grou
 Nous avons travaillé sur une machine virtuelle Ubuntu distante pour réaliser les testes.
 ####
 
-Apache.sh
+* Apache.sh
  - installation apache2
 
-Hardening.sh 
+* Hardening.sh 
  - configuration du fichier sshd_config.d
 
-ufw.sh
+* ufw.sh
  - installation d'ufw
+
+* certif_ssl.sh
+  - création d'un certificat ssl auto-signé
 
 NextCloud.sh
  - installation du service et ses dépendances
