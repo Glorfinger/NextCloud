@@ -1,4 +1,4 @@
-# NextToTheCloud
+# NextToTheCloud 🚀
 
 Déploiement automatisé dédié à l’hébergement d’un service Nextcloud écrit en Bash.
 
