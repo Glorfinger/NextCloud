@@ -12,7 +12,6 @@ Besoins initiaux : besoins du projet
 * Etienne Chamarier
 
 
-
  ## 🛠 Choix techniques : 
 * Ubuntu 23.10
 
@@ -20,11 +19,15 @@ Besoins initiaux : besoins du projet
 * Récupération de l'addresse de connexion à Nextcloud
 * Paramétrage du mod_security
 
-## 🤩 Solutions trouvées : Solutions et alternatives trouvées
-* Installation du package dnsutils pour recupérer l'adresse via WANIP4
-* 
+## 🤩 Solutions trouvées : 
+* Nextcloud : Installation du package dnsutils pour recupérer l'adresse via WANIP4
+* mod_security : Mauvais paramétrage du fichier de configuration qui se dupliquait. 
 
-## 🧪 Tests réalisés : description des tests de performance, de sécurité, etc.
+## 🧪 Tests réalisés : 
+* Apache2 : Vérification du status 'systemctl status apache2' et des logs 'sudo journalctl -xeu apache2'
+* UFW : Vérification du status 'systemctl status UFW'
+
+
 
 ## Résultats obtenus : ce qui a fonctionné
 
