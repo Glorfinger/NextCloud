@@ -7,7 +7,7 @@ if [ ! -d "$SSL_DIR" ]; then
 fi
 
 echo "Installation d'OpenSSL..."
-sudo apt install openssl
+sudo apt install -y openssl
 
 echo "Création du certificat auto-signé..."
 CERT_PATH="/etc/ssl/nextcloud-ssl.conf/autosigned.crt"
