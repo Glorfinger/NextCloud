@@ -4,7 +4,7 @@
 echo
 echo "Mise à jour des listes de paquets en cours..."
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y upgrade
 echo
 
 # Installation des packages nécessaires
