@@ -1,49 +1,50 @@
 
 ## Introduction
- ### 1.1 À propos
-Bienvenue dans le guide de l'utilisateur de notre Script NextCloud. Ce script a été conçu pour configurer votre environnement et installer le service NextCloud.
+ ### 1.1 About
+Welcome to the user guide for our NextCloud Script. This script is designed to configure your environment and install the NextCloud service.
 
- ### 1.2 Configuration système requise
-Avant d'installer le script, assurez-vous que votre système répond aux exigences minimales suivantes : 
-  * Systeme d'exploitation : Linux
-  * Disposer des droits SUDO.
+ ### 1.2 System Configuration Requirements
+Before installing the script, ensure that your system meets the following minimum requirements:
+  * Operating System: Linux
+  * SUDO rights available.
 
 ## Installation
- ### 2.1 Téléchargement
-Pour télécharger notre script, vous pouvez vous rendre directement sur https://github.com/Glorfinger/NextCloud/ et cloner le repos sur votre machine en utilisant ces liens : 
+ ### 2.1 Download
+To download our script, you can directly visit https://github.com/Glorfinger/NextCloud/ and clone the repository to your machine using these links:
  * https : 'https://github.com/Glorfinger/NextCloud.git'
  * ssh : 'git@github.com:Glorfinger/NextCloud.git'
 
- ### 2.2 Installation du script
-Une fois le repos cloné sur votre machine, vous devez vous rendre dans le dossier où vous venez de cloner le repos 'NextCloud > Script'  et exécuter le script 'execute_script.sh'.  
+ ### 2.2 Script Installation
+Once the repository is cloned to your machine, navigate to the directory where you cloned the repository 'NextCloud > Script' and execute the script 'execute_script.sh'.
 
-⚠️Il est recommandé de créer un dossier 'bashScript' dans $HOME puis de cloner le repo à l'intérieur. 
+⚠️It is recommended to create a 'bashScript' folder in $HOME and clone the repository inside.
 
-Si ce n'est pas possible, une fois le script clone sur mon machine, veuillez suivre la démarche suivante :
-* Se rendre dans le fichier execute_script.sh
-* Modifier le chemin de la ligne 4 'script_folder="votre/chemin/vers/le/script/"
-* Enregistrer les modifications.
-* Lancer le script execute_script.sh
+If not possible, after cloning the script to your machine, please follow these steps :
+
+* Navigate to the file execute_script.sh
+* Modify the path in line 4 'script_folder="your/path/to/the/script/"
+* Save the modifications.
+* Run the script execute_script.sh
 
 Commandes :
  * ./execute_script.sh
  * bash execute_script.sh
  * sh execute_script.sh
 
- ### 2.3 Configuration initiale
- * Git doit être installé sur votre machine 
+ ### 2.3 Initial Configuration
+ * Git must be installed on your machine
 
-## Fonctionnalités principales 
- ### 3.1 Installation d'un service web (Apache2)
- ### 3.2 Configuration d'Apache2
+## Main Features
+ ### 3.1 Web Service Installation (Apache2)
+ ### 3.2 Apache2 Configuration
   * a2enmod
   * a2ensite
 
- ### 3.3 Configuration du Hardening
- Pour la configuration du hardening, nous avons créer un fichier de configuration dans  '/etc/ssh/sshd_config.d/hardening.conf'.   
- ⚠️ A chaque utilisation du script, le fichier Hardening sera réinitiallisé.
+ ### 3.3 Hardening Configuration
+ For hardening configuration, we have created a configuration file in '/etc/ssh/sshd_config.d/hardening.conf'.   
+ ⚠️ Every time the script is used, the Hardening file will be reset.
 
- Configuration du Hardening : 
+ Hardening Configuration :
   * PermitRootLogin no
   * MaxAuthTries 3
   * LoginGraceTime 20
@@ -55,15 +56,19 @@ Commandes :
   * PermitUserEnvironment no
   * DebianBanner no
 
-### 3.4 Installation d'UFW
-Installation d'UFW pour configurer le pare-feu.   
-⚠️ Lors de l'installation d'ufw, il vous sera demandé de saisir le port que vous souhaitez utilisé pour SSH , HTTP et HTTPS. 
+### 3.4 UFW Installation
+Installation of UFW to configure the firewall.
+⚠️ During ufw installation, you will be asked to enter the port you want to use for SSH, HTTP, and HTTPS.
 
-### 3.5 Installation d'un certification Auto signé.
-Installation d'OPENSLL pour gérer la création des certificats SSL. Si vous avez oublié de noté la clé, vous pouvez vous rendre dans le fichier autosigned.key ($HOME/autosigned.key)  pour retrouver votre clé.
+### 3.5 Self-signed Certificate Installation
+Installation of OpenSSL to manage SSL certificate creation. If you forget to note the key, you can find it in the file autosigned.key ($HOME/autosigned.key).
 
-### 3.6 Telechargement de NextCloud
-Les droits d'utilisateur et le chemin d'installation de Nextcloud sont paramétrés lors du téléchargement. Un fichier /etc/apache2/sites-available/nextcloud.conf est créé et paramétré, puis on créé la base de données.   
+### 3.6 Mod_security Installation
+Installation of the mod_security package for apache2 and its configuration that can be found in '/etc/apache2/modsecurity.conf'.
+
+
+### 3.7 NextCloud Download
+User rights and Nextcloud installation path are configured during the download. A file '/etc/apache2/sites-available/nextcloud.conf' is created and configured, then the database is created.
 
 ## Installed modules :
 
@@ -97,6 +102,16 @@ Les droits d'utilisateur et le chemin d'installation de Nextcloud sont paramétr
    * ssh
    * http
    * https
+
+### certif_ssl.sh
+4- Installation of Openssl :
+   * certh path : '/etc/ssl/nextcloud-ssl.conf/autosigned.crt'
+   * key path :'/etc/ssl/nextcloud-ssl.conf/autosigned.key'
+
+### Mod_security.sh 
+5- Installation and configuration of mod_security : 
+   * libapache2-mod-security2*
+   * configuration : '/etc/apache2/modsecurity.conf'
 
 ### NextCloud.sh
 4- Installation of packages :
